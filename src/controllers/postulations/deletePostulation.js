@@ -1,10 +1,10 @@
-import { Postulations } from "../../models/Postulation";
+import { Postulations } from "../../models/Postulation.js";
 import {
   badRequestResponse,
   deniedResponse,
   internalServerError,
   okResponse,
-} from "../../responses";
+} from "../../responses/index.js";
 import { MEGA_ULTRA_SECRET_PASSWORD } from "../../config/envs.js";
 
 const deletePostulation = async (req, res) => {

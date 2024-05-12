@@ -1,9 +1,9 @@
-import { Postulations } from "../../models/Postulation";
+import { Postulations } from "../../models/Postulation.js";
 import {
   badRequestResponse,
   internalServerError,
   okResponse,
-} from "../../responses";
+} from "../../responses/index.js";
 
 const getAll = async (req, res) => {
   try {

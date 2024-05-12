@@ -1,4 +1,4 @@
-import { Postulations } from "../../models/Postulation";
+import { Postulations } from "../../models/Postulation.js";
 import { MEGA_ULTRA_SECRET_PASSWORD } from "../../config/envs.js";
 import {
   badRequestResponse,
