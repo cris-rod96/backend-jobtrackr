@@ -1,5 +1,5 @@
-import mongoose, { model } from "mongoose";
-const { Model, models, Schema } = mongoose;
+import mongoose from "mongoose";
+const { model, models, Schema } = mongoose;
 
 const PostulationSchema = new Schema(
   {
@@ -73,6 +73,11 @@ const PostulationSchema = new Schema(
     postulationDate: {
       type: String,
       required: true,
+    },
+
+    isDeleted: {
+      type: String,
+      default: false,
     },
   },
   {
