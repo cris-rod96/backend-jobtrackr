@@ -17,7 +17,10 @@ const getAll = async (req, res) => {
 const getByID = async (req, res) => {
   try {
     const { id } = req.params;
-    const postulation = await Postulations.findById(id);
+    const postulation = await Postulations.findOne({
+      _id: id,
+      isDeleted: false,
+    });
     return postulation
       ? okResponse(res, postulation)
       : badRequestResponse(res, "Postulación no encontrada");

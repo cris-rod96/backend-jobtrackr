@@ -1,0 +1,48 @@
+### CREATE POSTULATION
+POST http://localhost:3001/api/v1/postulations/create
+Content-Type: application/json
+
+{
+  "companyName": "EmpresaXYZ",
+  "jobTitle": "Desarrollador de software",
+  "location": "Estados Unidos",
+  "modality": "Remoto",
+  "offeredSalary": 60000,
+  "recruiterName": "Juan Pérez",
+  "recruiterEmail": "juan@empresa.com",
+  "recruiterPhone": "+1234567890",
+  "communicationChannel": "LinkedIn",
+  "companyWebsite": "http://www.empresa.com",
+  "requisites": ["Experiencia en desarrollo web", "Conocimientos en JavaScript"],
+  "postulationDate": "2024-05-12",
+  "secret_password": ""
+}
+
+
+### GET ALL POSTULATIONS
+
+GET http://localhost:3001/api/v1/postulations/all
+
+### GET POSTULATION BY ID
+
+GET http://localhost:3001/api/v1/postulations/view/66410e337879d6f3c7e9cffb
+
+
+### UPDATE POSTULATION
+
+PUT http://localhost:3001/api/v1/postulations/update/66410e337879d6f3c7e9cffb
+Content-Type: application/json
+
+{
+    "companyName": "EmpresaABC",
+    "secret_password": ""
+}
+
+### DELETE POSTULATION
+
+DELETE  http://localhost:3001/api/v1/postulations/delete/66410e337879d6f3c7e9cffb
+Content-Type: application/json
+
+{
+    "secret_password": ""
+}

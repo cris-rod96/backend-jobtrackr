@@ -13,9 +13,6 @@ postulationRouter.delete(
   "/delete/:id",
   postulationControllers.deletePostulation
 );
-postulationRouter.delete(
-  "/update/:id",
-  postulationControllers.updatePostulation
-);
+postulationRouter.put("/update/:id", postulationControllers.updatePostulation);
 
 export { postulationRouter };
