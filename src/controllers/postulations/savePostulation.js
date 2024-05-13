@@ -1,4 +1,5 @@
 import { Postulations } from "../../models/Postulation.js";
+import { DateTime } from "luxon";
 import { MEGA_ULTRA_SECRET_PASSWORD } from "../../config/envs.js";
 import {
   badRequestResponse,
@@ -15,7 +16,10 @@ const savePostulation = async (req, res) => {
         "Esta acción requiere de permisos adicionales"
       );
 
-    const postulation = await Postulations.create(data);
+    const postulation = await Postulations.create({
+      ...data,
+      postulationDate: DateTime.now().toLocaleString(DateTime.DATE_MED),
+    });
     return postulation
       ? okResponse(res, postulation)
       : badRequestResponse(res, "No se pudo guardar la postulación");

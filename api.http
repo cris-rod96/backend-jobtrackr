@@ -15,7 +15,7 @@ Content-Type: application/json
   "companyWebsite": "http://www.empresa.com",
   "requisites": ["Experiencia en desarrollo web", "Conocimientos en JavaScript"],
   "postulationDate": "2024-05-12",
-  "secret_password": ""
+  "secret_password": "ABCDE12cdefg32*"
 }
 
 
