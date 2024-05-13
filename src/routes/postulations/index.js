@@ -9,10 +9,7 @@ postulationRouter.get(
   postulationControllers.getPostulations.getByID
 );
 postulationRouter.post("/create", postulationControllers.savePostulation);
-postulationRouter.delete(
-  "/delete/:id",
-  postulationControllers.deletePostulation
-);
+postulationRouter.put("/delete/:id", postulationControllers.deletePostulation);
 postulationRouter.put("/update/:id", postulationControllers.updatePostulation);
 
 export { postulationRouter };

@@ -14,7 +14,7 @@ const updatePostulation = async (req, res) => {
     if (!secret_password || secret_password !== MEGA_ULTRA_SECRET_PASSWORD)
       return deniedResponse(
         res,
-        "Esta acción requiere de permisos adicionales"
+        "Acción no permitida. La contraseña es obligatoria."
       );
     const postulationEdited = await Postulations.findByIdAndUpdate(id, data);
     return postulationEdited
